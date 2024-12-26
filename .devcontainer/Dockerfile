@@ -20,8 +20,5 @@ ENV PATH="/opt/venv/bin:$PATH"
 RUN pip install --no-cache-dir --upgrade pip pipx \
     && python3 -m pipx ensurepath
 
-# Set the working directory
-WORKDIR /workspaces
-
 # Default command
 CMD ["sleep", "infinity"]
