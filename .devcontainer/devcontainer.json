@@ -1,13 +1,14 @@
 {
     "name": "AutoGenius Dev Container",
-    "build": {
-      "dockerfile": "Dockerfile"
+    "image": "mcr.microsoft.com/devcontainers/javascript-node:18",
+    "features": {
+        "python": "3.10"
     },
     "forwardPorts": [
       3000,
       8000
     ],
-    "postCreateCommand": "cd frontend && npm install"
+    "postCreateCommand": "cd frontend && npm install && cd ../backend && pip install -r requirements.txt"
   }
   
   
