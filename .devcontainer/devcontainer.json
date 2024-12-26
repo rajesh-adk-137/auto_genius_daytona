@@ -7,7 +7,7 @@
       3000,
       8000
     ],
-    "postCreateCommand": "cd frontend && npm install && cd ../backend && pip install -r requirements.txt"
+    "postCreateCommand": "cd frontend && npm install && cd ../backend && xargs -a requirements.txt -n 1 pipx install"
   }
   
   
