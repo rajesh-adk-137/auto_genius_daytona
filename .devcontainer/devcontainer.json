@@ -1,45 +1,9 @@
 {
     "name": "AutoGenius Dev Container",
     "image": "mcr.microsoft.com/devcontainers/javascript-node:18",
-    "features": {
-        "python": "3.10"
-    },
     "forwardPorts": [
-      3000,
-      8000
+      3000
     ],
-    "customizations": {
-        "vscode": {
-            "settings": {
-                "python.defaultInterpreterPath": "/usr/local/bin/python",
-                "python.autoComplete.extraPaths": [
-                    "/usr/src/app/src"
-                ],
-                "python.linting.enabled": true,
-                "python.linting.pylintEnabled": true,
-                "eslint.enable": true,
-                "editor.formatOnSave": true,
-                "editor.codeActionsOnSave": {
-                    "source.fixAll": true
-                },
-                "files.associations": {
-                    "*.js": "javascript",
-                    "*.jsx": "javascriptreact"
-                }
-            },
-            "extensions": [
-                "ms-python.python",
-                "esbenp.prettier-vscode",
-                "dbaeumer.vscode-eslint",
-                "ms-vsliveshare.vsliveshare",
-                "ms-vscode.vscode-typescript-tslint-plugin",
-                "eamodio.gitlens",
-                "formulahendry.auto-close-tag",
-                "formulahendry.auto-rename-tag",
-                "xabikos.javascriptsnippets"
-            ]
-        }
-    },
-    "postCreateCommand": "cd frontend && npm install && cd ../backend && pip install poetry && poetry install"
+    "postCreateCommand": "cd frontend && npm install"
   }
   
